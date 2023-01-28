@@ -72,7 +72,7 @@ img {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -24px;
+    bottom: 0;
     width: 100%;
     height: 4px;
     border-radius: 2px;
@@ -90,8 +90,6 @@ img {
 }
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 
@@ -128,8 +126,11 @@ img {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    color: var(--main-color);
-    transition: color 250ms linear;
+    /* color: var(--main-color); */
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: block;
+    transition: color 250ms var(--cubic);
 }
 
 .header-link:hover,
@@ -150,7 +151,7 @@ img {
     line-height: 1.5;
     font-size: 16px;
     list-style: none;
-    transition: color 250ms linear;
+    transition: color 250ms var(--cubic);
 }
 
 .header-tel:hover,
@@ -187,7 +188,6 @@ img {
 }
 
 .hero-btn {
-    cursor: pointer;
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     font-size: 16px;
@@ -200,12 +200,11 @@ img {
     border-radius: 4px;
     display: flex;
     border-color: var(--hover-color);
-    transition: color 250ms linear;
-    transition: color 250ms linear, background-color 250ms linear;
+    transition: color 250ms var(--cubic), 
+    background-color 250ms var(--cubic);
 }
 
 .portfolio-btn {
-    cursor: pointer;
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     font-size: 16px;
@@ -215,7 +214,8 @@ img {
     background: var(--background-btn);
     border-radius: 4px;
     border: 1px solid var(--border-portfolio-btn);
-    transition: color 250ms linear, background-color 250ms linear;
+    transition: color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
 }
 
 .portfolio-btn:hover,
@@ -239,14 +239,8 @@ img {
 
 .category {}
 
-/* .category-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    text-transform: capitalize;
-    margin-bottom: 72px;
-} */
+.category-title {
+}
 
 .category-list {
     padding-top: 120px;
@@ -283,7 +277,6 @@ img {
     color: var(--second-color);
     line-height: 1.5;
     margin-top: 8px;
-    /* font-size: 16px; */
 
 }
 
@@ -416,7 +409,7 @@ img {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: color 250ms linear, background-color 250ms linear;
+    transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
 .team-soc-icon {
@@ -460,7 +453,7 @@ img {
     align-items: center;
     justify-content: center;
     color: var(--border-customers-icon);
-    transition: color 250ms linear, background-color 250ms linear;
+    transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
 .customers-icon {
@@ -544,7 +537,7 @@ img {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: color 250ms linear, background-color 250ms linear;
+    transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
 .footer-team-soc-icon {
@@ -587,8 +580,7 @@ img {
     padding: 40px 32px 0 32px;
     height: 100%;
     transform: translateY(100%);
-    transition: transform 250ms linear;
-    /* transform: box-shadow 250ms var(--cubic); */
+    transition: transform 250ms var(--cubic);
     overflow: auto;
 }
 
@@ -605,7 +597,7 @@ img {
     width: 100%;
     height: 100%;
     background: rgba(46, 47, 66, 0.4);
-    transition: opacity 250ms linear, visibility 250ms linear;
+    transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
 }
 
 .backdrop.is-hidden .modal {
@@ -631,11 +623,18 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 24px;
-    transition: transform 250ms linear;
+    transition: transform 250ms var(--cubic);
 }
 
 .button-x:is(:hover, :focus) {
-    color: var(--background-color);
+    /* color: var(--background-color); */
+    fill: currentColor;
+}
+
+.button-x {
+    margin: auto;
+    display: block;
+    justify-content: center;
 }
 
 .modal-close {
@@ -646,10 +645,11 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
     display: block;
     margin-left: auto;
-    transition: color 250ms linear, background-color 250ms linear;
+    transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
 .modal-close:is(:hover, :focus)  {
     border-color: var(--hover-btn-color);
     background-color: var(--hover-btn-color);
+    color: var(--backdrop-color);
 }
