@@ -628,7 +628,6 @@ img {
 
 .button-x:is(:hover, :focus) {
     color: var(--background-color);
-    fill: currentColor;
 }
 
 .button-x {
@@ -638,6 +637,7 @@ img {
 }
 
 .modal-close {
+    fill: currentColor;
     border-radius: 50%;
     width: 24px;
     height: 24px;
