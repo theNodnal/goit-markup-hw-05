@@ -63,10 +63,6 @@ img {
 
 /* -------------------header -------------- */
 
-.current {
-    color: var(--hover-btn-color);
-    position: relative;
-}
 
 .current::after {
     content: '';
@@ -126,13 +122,17 @@ img {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    /* color: var(--main-color); */
+    color: var(--main-color);
     padding-top: 24px;
     padding-bottom: 24px;
     display: block;
     transition: color 250ms var(--cubic);
 }
 
+.current {
+    color: var(--hover-btn-color);
+    position: relative;
+}
 .header-link:hover,
 .header-link:focus {
     color: var(--hover-color);
@@ -627,7 +627,7 @@ img {
 }
 
 .button-x:is(:hover, :focus) {
-    /* color: var(--background-color); */
+    color: var(--background-color);
     fill: currentColor;
 }
 
